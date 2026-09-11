@@ -3,8 +3,8 @@ name = "my_maze"
 version = "1.0.0"
 description = "A project to learn randomness and build a random maze, then find the shortest path between the two points"
 authors = [
-    "aabtah <abd-alghani.abtah@learner.42.tech>",
-    "mabu-are <mohammad.abu-aresh@learner.42.tech>"
+    "AbdAlghaniAbtah <abdalghaniabtah@gmail.com >",
+    "Mhamad Aresh <mohammad.abu-aresh@learner.42.tech>"
 ]
 license = "MIT"
 readme = "README.md"
