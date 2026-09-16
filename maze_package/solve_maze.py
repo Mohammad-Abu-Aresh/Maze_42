@@ -16,13 +16,15 @@ def solve_maze(
     start: tuple[int, int] = maze_config.entry
     end: tuple[int, int] = maze_config.exit
 
-    stack: list[tuple[int, int]] = [start]
+    # standard list used as a queue for BFS
+    # (guarantees shortest path instantly)
+    queue: list[tuple[int, int]] = [start]
     visited: set[tuple[int, int]] = {start}
 
     parent_map: dict[tuple[int, int], tuple[int, int]] = {}
 
-    while stack:
-        current = stack.pop()
+    while queue:
+        current = queue.pop(0)
 
         # if we reached our target node (end)
         if current == end:
@@ -33,7 +35,7 @@ def solve_maze(
             if neighbor not in visited:
                 visited.add(neighbor)
                 parent_map[neighbor] = current
-                stack.append(neighbor)
+                queue.append(neighbor)
 
     if end not in visited:
         return []
