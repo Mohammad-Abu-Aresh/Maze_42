@@ -1,5 +1,6 @@
 tmp.py
 tst.py
+poetry.lock
 test*
 *.pyc
 __pycache__/
